@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:gravity="center_vertical|center_horizontal">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/delete_cb_select"
+		android:layout_centerInParent="true"
+		android:text="お気に入りから削除する"
+		android:textSize="@dimen/nb.text.normal"/>
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/container_view"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="0dp"
+	android:background="@drawable/shape_common_gray_corner"
+	android:orientation="vertical"
+	android:padding="0dp">
+
+	<ImageView
+		android:id="@+id/item_chapter_image"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="10dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/ic_default_portrait" />
+
+	<TextView
+		android:id="@+id/item_chapter_no"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_toRightOf="@id/item_chapter_image"
+		android:ellipsize="end"
+		android:singleLine="true"
+		android:textColor="@color/light_coffee"
+		android:textSize="13sp"
+		tools:text="我就是静静" />
+
+	<TextView
+		android:id="@+id/item_chapter_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/item_chapter_no"
+		android:layout_marginTop="5dp"
+		android:layout_toRightOf="@id/item_chapter_image"
+		android:ellipsize="end"
+		android:singleLine="true"
+		android:textColor="@color/nb.text.default"
+		tools:text="越到后面越索然无味" />
+
+	<TextView
+		android:id="@+id/item_chapter_time"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:ellipsize="end"
+		android:singleLine="true"
+		android:textColor="@color/nb.text.common_h3"
+		android:textSize="13sp"
+		android:visibility="gone"
+		tools:text="昨天"
+		tools:visibility="visible" />
+</RelativeLayout>

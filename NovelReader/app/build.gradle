@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'realm-android'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.zuk.ireader"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion 26
+        versionCode 18
+        versionName "1.1.8"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '26.0.2'
+}
+
+greendao{
+    schemaVersion 3
+    daoPackage 'com.zuk.ireader.model.gen'
+    targetGenDir 'src/main/java'
+}
+
+repositories {
+    maven {
+        url 'https://dl.bintray.com/qichuan/maven/'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+//    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+//    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+//    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation 'com.android.support:appcompat-v7:27+'
+    implementation "com.android.support:design:27+"
+    implementation "com.android.support:support-v4:27+"
+    implementation "com.android.support:cardview-v7:27+"
+
+    // View injection
+    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    // NetWork
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+    implementation "com.squareup.okio:okio:$rootProject.okioVersion"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    // ImageLoader
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    // ORM Database
+    implementation "org.greenrobot:greendao:$rootProject.greendaoVersion"
+    testImplementation "junit:junit:$rootProject.junitVersion"
+
+    // OpenCC to convert Simp. Chinese to Trad. Chinese
+    implementation "com.zqc.opencc.android.lib:lib-opencc-android:0.8.0@aar"
+
+    // AndroidTagGroup
+    implementation 'me.gujun.android.taggroup:library:1.4@aar'
+    // Android Leak Analysis
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.bigkoo:svprogresshud:1.0.6'
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation 'com.roughike:bottom-bar:2.3.1'
+    implementation 'com.github.kingideayou:tagcloudview:1.0.2'
+    implementation 'com.github.hotchemi:android-rate:1.0.1'
+//    implementation 'com.github.navasmdc:MaterialDesign:1.5@aar'
+
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-core:16+'
+    implementation 'com.google.firebase:firebase-firestore:17.0.2'
+    implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.google.firebase:firebase-messaging:17+'
+    //implementation 'com.google.api-client:google-api-client:1.23.0'
+
+    // Add dependency
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.7'
+
+    implementation 'com.android.support:multidex:1.0.2'
+
+    compile project(path: ':hwtxtreaderlib')
+}
+
+apply plugin: 'com.google.gms.google-services'

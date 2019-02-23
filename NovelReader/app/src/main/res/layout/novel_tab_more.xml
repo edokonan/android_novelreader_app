@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_cart_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none" >
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="60.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="10.0dip"
+            >
+            <!--課金設定サービス-->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="4.0dip"
+                android:text="オプションサービス"
+                android:textColor="#ff888888"
+                android:textSize="16.0sp"
+                android:visibility="gone"
+                />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:visibility="gone"
+                >
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1.0dip"
+                    android:background="@color/gray"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+                    <TableRow
+                        android:id="@+id/more_download"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="ダウンロード"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/more_adclear"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="広告非表示を購入"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/more_boxlimitclear"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="整理ボックス数制限解除を購入"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="4.0dip"
+                android:text="その他"
+                android:textColor="#ff888888"
+                android:textSize="16.0sp" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <TableLayout
+                    android:id="@+id/MorePageTableLayout_Follow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1.0dip"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+                    <TableRow
+                        android:id="@+id/more_vercheck"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="バージョンチェック"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1.0dip"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+                    <TableRow
+                        android:id="@+id/more_appreview"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="アプリを評価する"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1.0dip"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+                    <TableRow
+                        android:id="@+id/more_feedback"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="ご意見とお問い合わせ"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <!--輸送会社設定  -->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="4.0dip"
+                android:text="プライバシー"
+                android:textColor="#ff888888"
+                android:textSize="16.0sp" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1.0dip"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+                    <TableRow
+                        android:id="@+id/more_privacy_policy"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="プライバシーポリシー"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+
+            <!--輸送会社設定  -->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="4.0dip"
+                android:text="設定"
+                android:textColor="#ff888888"
+                android:textSize="16.0sp"
+                android:visibility="gone"
+                />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1.0dip"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+                    <TableRow
+                        android:id="@+id/more_sortcom"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="配送業者を設定する"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/more_boxview"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:paddingTop="16.0dip" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:drawablePadding="10.0dip"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17.0dip"
+                            android:text="整理ボックスを設定する"
+                            android:textColor="#ff333333"
+                            android:textSize="16.0sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
